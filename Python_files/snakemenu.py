@@ -32,7 +32,7 @@ logo_height = int(logo_width * logo_img.get_height() / logo_img.get_width())
 logo_img = pygame.transform.scale(logo_img, (logo_width, logo_height))
 
 background_images = [
-    pygame.image.load("bg1.jpeg"),
+    pygame.image.load("bg1.png"),
     pygame.image.load("bg2.jpg")
 ]
 
