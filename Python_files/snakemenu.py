@@ -26,14 +26,14 @@ selected_item = 0
 
 font = pygame.font.SysFont('consolas', 60, bold=True)
 
-logo_img = pygame.image.load("strangersnake_logo.png")
+logo_img = pygame.image.load("assets/strangersnake_logo.png")
 logo_width = int(usable_frame_size_x * 0.4)
 logo_height = int(logo_width * logo_img.get_height() / logo_img.get_width())
 logo_img = pygame.transform.scale(logo_img, (logo_width, logo_height))
 
 background_images = [
-    pygame.image.load("bg1.png"),
-    pygame.image.load("bg2.jpg")
+    pygame.image.load("assets/bg1.png"),
+    pygame.image.load("assets/bg2.jpg")
 ]
 
 def draw_menu():
