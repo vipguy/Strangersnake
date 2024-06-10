@@ -27,17 +27,17 @@ pygame.display.set_caption('Snake Eater')
 fps_controller = pygame.time.Clock()
 
 pygame.mixer.init()
-pygame.mixer.music.load("Background_music.mp3")
+pygame.mixer.music.load("sound_files/Background_music.mp3")
 pygame.mixer.music.play(-1)
-eat_sound = pygame.mixer.Sound("Eat_sound.wav")
-game_over_sound = pygame.mixer.Sound("Game_over_sound.wav")
+eat_sound = pygame.mixer.Sound("sound_files/Eat_sound.wav")
+game_over_sound = pygame.mixer.Sound("sound_files/Game_over_sound.wav")
 
 # Load all apple images
-apple_images = [pygame.image.load(f"{i}.png") for i in range(1, 95)]
+apple_images = [pygame.image.load(f"assets/{i}.png") for i in range(1, 95)]
 apple_images = [pygame.transform.scale(img, (150,150)) for img in apple_images]
 
 # Load monster idle frames
-monster_idle_frames = [pygame.image.load(f"0_Monster_Idle_{i:03}.png") for i in range(18)]
+monster_idle_frames = [pygame.image.load(f"assets/0_Monster_Idle_{i:03}.png") for i in range(18)]
 monster_idle_frames = [pygame.transform.scale(frame, (130, 130)) for frame in monster_idle_frames]
 
 snake_pos = [frame_size_x // 2, frame_size_y // 2]
@@ -56,10 +56,10 @@ current_apple_image = random.choice(apple_images)
 is_animation = current_apple_image in monster_idle_frames
 animation_index = 0
 
-snake_zone_img = pygame.image.load("snakebody.png")
+snake_zone_img = pygame.image.load("assets/snakebody.png")
 snake_zone_img = pygame.transform.scale(snake_zone_img, (60, 60))
 
-stranger_snake_logo = pygame.image.load("strangersnake_logo.png")
+stranger_snake_logo = pygame.image.load("assets/strangersnake_logo.png")
 stranger_snake_logo = pygame.transform.scale(stranger_snake_logo, (int(frame_size_x * 0.8), int(frame_size_y * 0.1)))
 
 direction = 'RIGHT'
@@ -146,7 +146,7 @@ def show_description():
         game_window.blit(description_surface, description_rect)
         y_offset += 40
 
-    logo_img = pygame.image.load("strangersnake_logo.png")
+    logo_img = pygame.image.load("assets/strangersnake_logo.png")
     logo_img = pygame.transform.scale(logo_img, (400, 200))
     logo_rect = logo_img.get_rect()
     logo_rect.midtop = (frame_size_x / 2, y_offset + 10)
@@ -167,8 +167,8 @@ def show_controls():
 
 # Load background images
 background_images = [
-    pygame.image.load("bg1.png"),
-    pygame.image.load("bg2.png")
+    pygame.image.load("assets/bg1.png"),
+    pygame.image.load("assets/bg2.png")
 ]
 
 # Select a random background image initially
