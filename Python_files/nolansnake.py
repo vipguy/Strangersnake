@@ -33,7 +33,7 @@ eat_sound = pygame.mixer.Sound("sound_files/Eat_sound.wav")
 game_over_sound = pygame.mixer.Sound("sound_files/Game_over_sound.wav")
 
 # Load all apple images
-apple_images = [pygame.image.load(f"assets/{i}.png") for i in range(1, 95)]
+apple_images = [pygame.image.load(f"assets/{i}.png") for i in range(1, 144)]
 apple_images = [pygame.transform.scale(img, (150,150)) for img in apple_images]
 
 # Load monster idle frames
